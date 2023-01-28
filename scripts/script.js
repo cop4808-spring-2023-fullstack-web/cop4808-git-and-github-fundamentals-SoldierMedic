@@ -8,6 +8,7 @@ const buttons = document.querySelectorAll('button');
 
 window.addEventListener('keydown', function(e){
     const key = document.querySelector(`button[data-key='${e.keyCode}']`);
+    console.log(`keypress = ${e.keyCode}`)
     key.click();
 });
 
@@ -41,10 +42,16 @@ function clickButton() {
             } else if(buttons[i].classList.contains('sign')) {
                 inputSign(displayValue);
                 updateDisplay();
-            } else if(buttons[i].classList.contains('clear'))
+            } else if(buttons[i].classList.contains('clear')){
                 clearDisplay();
                 updateDisplay();
-        }
+            } else if(buttons[i].classList.contains('sqrt')){
+                squareRoot(displayValue);
+                updateDisplay();
+            } else if(buttons[i].classList.contains('logOfX'))
+            logOfX(displayValue);
+            updateDisplay();
+            } 
     )}
 }
 
@@ -104,7 +111,7 @@ function inputEquals() {
         secondOperand = displayValue;
         result = operate(Number(firstOperand), Number(secondOperand), secondOperator);
         if(result === 'lmao') {
-            displayValue = 'lmao';
+            displayValue = 'lmao';//huh???
         } else {
             displayValue = roundAccurately(result, 15).toString();
             firstOperand = displayValue;
@@ -113,7 +120,7 @@ function inputEquals() {
             secondOperator = null;
             result = null;
         }
-    } else {
+    } else { 
         //handles first operation
         secondOperand = displayValue;
         result = operate(Number(firstOperand), Number(secondOperand), firstOperator);
@@ -144,7 +151,7 @@ function inputPercent(num) {
 }
 
 function inputSign(num) {
-    displayValue = (num * -1).toString();
+    displayValue = (num * -1).toString(); //why does it go to a string?
 }
 
 function clearDisplay() {
@@ -181,4 +188,10 @@ function operate(x, y, op) {
 
 function roundAccurately(num, places) {
     return parseFloat(Math.round(num + 'e' + places) + 'e-' + places);
+}
+function squareRoot(num){
+    return displayValue = Math.sqrt(num);
+}
+function logOfX(num){
+    return displayValue = Math.log(num);
 }
