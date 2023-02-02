@@ -195,3 +195,6 @@ function squareRoot(num){
 function logOfX(num){
     return displayValue = Math.log(num).toFixed(9);//truncates to 9 digits
 }
+function logOfX(num){
+    return displayValue = Math.log(num).toFixed(9);//truncates to 9 digits
+}
