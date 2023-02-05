@@ -45,7 +45,7 @@ function clickButton() {
             } else if(buttons[i].classList.contains('clear')){
                 clearDisplay();
                 updateDisplay();
-            } else if(buttons[i].classList.contains('sqrt')){
+            } else if(buttons[i].classList.contains('sqrt')){// Checks if 
                 squareRoot(displayValue);
                 updateDisplay();
             } else if(buttons[i].classList.contains('logOfX'))
@@ -69,7 +69,7 @@ function inputOperand(operand) {
             displayValue += operand;
         }
     } else {
-        //3rd/5th click - inputs to secondOperand
+        //3rd/5th click -    inputs to secondOperand
         if(displayValue === firstOperand) {
             displayValue = operand;
         } else {
@@ -191,9 +191,6 @@ function roundAccurately(num, places) {
 }
 function squareRoot(num){
     return displayValue = Math.sqrt(num).toFixed(9);
-}
-function logOfX(num){
-    return displayValue = Math.log(num).toFixed(9);//truncates to 9 digits
 }
 function logOfX(num){
     return displayValue = Math.log(num).toFixed(9);//truncates to 9 digits
