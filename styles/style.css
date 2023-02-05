@@ -126,13 +126,13 @@ button {
 .logOfX:active {
     background-color: #ffc183;
 }
-.ln {
+.xCubed {
     background-color: blue;    
     font-weight: bold;    
 
 }
 
-.ln:active {
+.xCubed :active {
     background-color: #ffc183;
 }
 .pi {

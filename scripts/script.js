@@ -48,10 +48,15 @@ function clickButton() {
             } else if(buttons[i].classList.contains('sqrt')){// Checks if 
                 squareRoot(displayValue);
                 updateDisplay();
-            } else if(buttons[i].classList.contains('logOfX'))
-            logOfX(displayValue);
-            updateDisplay();
-            } 
+            } else if(buttons[i].classList.contains('logOfX')){
+                logOfX(displayValue);
+                updateDisplay();
+            } else if(buttons[i].classList.contains('pi')){
+                pi();   
+                updateDisplay();
+            } else if(buttons[i].classList.contains('xCubed'))
+                xCubed();
+    }
     )}
 }
 
@@ -194,4 +199,11 @@ function squareRoot(num){
 }
 function logOfX(num){
     return displayValue = Math.log(num).toFixed(9);//truncates to 9 digits
+}
+function pi(){
+    displayValue = Math.PI.toFixed(9);//truncates to 9 digits
+}
+function xCubed(){
+    displayValue = displayValue * displayValue * displayValue
+    updateDisplay()
 }
