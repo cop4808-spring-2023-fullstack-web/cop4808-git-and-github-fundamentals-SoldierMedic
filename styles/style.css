@@ -130,11 +130,12 @@ button {
     background-color: blue;    
     font-weight: bold;    
 
-}
+}/* cubed function color and font weight*/
 
 .xCubed:active {
     background-color: #ffc183;
-}
+}/* active color change for cubed function
+this is the same for the other 4 functions. */
 .pi {
     background-color: blue;    
     font-weight: bold;    

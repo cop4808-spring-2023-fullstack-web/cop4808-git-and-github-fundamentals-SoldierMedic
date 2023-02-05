@@ -45,16 +45,16 @@ function clickButton() {
             } else if(buttons[i].classList.contains('clear')){
                 clearDisplay();
                 updateDisplay();
-            } else if(buttons[i].classList.contains('sqrt')){// Checks if 
+            } else if(buttons[i].classList.contains('sqrt')){// Checks if //checks to see if sqrt is pressed
                 squareRoot(displayValue);
                 updateDisplay();
-            } else if(buttons[i].classList.contains('logOfX')){
+            } else if(buttons[i].classList.contains('logOfX')){//checks to see if log is pressed
                 logOfX(displayValue);
                 updateDisplay();
-            } else if(buttons[i].classList.contains('pi')){
+            } else if(buttons[i].classList.contains('pi')){//checks to see if pi is pressed
                 pi();   
                 updateDisplay();
-            } else if(buttons[i].classList.contains('xCubed'))
+            } else if(buttons[i].classList.contains('xCubed'))//checks to see if xCubed is pressed
                 xCubed();
     }
     )}
@@ -196,7 +196,7 @@ function roundAccurately(num, places) {
 }
 function squareRoot(num){
     return displayValue = Math.sqrt(num).toFixed(9);
-}
+}//uses Math.sqrt function to the num passed in
 function logOfX(num){
     return displayValue = Math.log(num).toFixed(9);//truncates to 9 digits
 }
@@ -206,4 +206,4 @@ function pi(){
 function xCubed(){
     displayValue = (displayValue * displayValue * displayValue).toFixed(9)
     updateDisplay()
-}
+}//xCubed function returned the value cubed and updates display
