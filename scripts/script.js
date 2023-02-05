@@ -204,6 +204,6 @@ function pi(){
     displayValue = Math.PI.toFixed(9);//truncates to 9 digits
 }
 function xCubed(){
-    displayValue = displayValue * displayValue * displayValue
+    displayValue = (displayValue * displayValue * displayValue).toFixed(9)
     updateDisplay()
 }
