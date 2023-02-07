@@ -7,9 +7,10 @@ let result = null;
 const buttons = document.querySelectorAll('button');
 
 window.addEventListener('keydown', function(e){
-    const key = document.querySelector(`button[data-key='${e.keyCode}']`);
-    console.log(`keypress = ${e.keyCode}`)
+    const key = document.querySelector(`button[data-key='${e.key.toLowerCase()}']`);
+    console.log(`keypress = ${e.key}`)
     key.click();
+     console.log("key =",e.key)
 });
 
 function updateDisplay() {
